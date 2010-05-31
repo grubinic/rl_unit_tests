@@ -2,8 +2,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), "../lib", "leapyear")
 
 require 'test/unit'
 
-class TestLeapYear < Test::Unit::TestCase
-  include TestUtils
+class TestLeapYear < Test::Unit::TestCase  
   
   def setup
     @value_and_expected = {-100 => false, 400 => true, 1111 => false, 1999 => false, 2000 => true,
@@ -11,7 +10,7 @@ class TestLeapYear < Test::Unit::TestCase
   end 
  
   def test_leap_year   
-    @value_and_expected.each_pair do |value, expected| 
+    @value_and_expected.each_pair do |value, expected|      
       assert_equal leap_year?(value), expected 
     end
   end
