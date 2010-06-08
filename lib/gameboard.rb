@@ -16,6 +16,7 @@ class GameBoard
   end
   
   def check_yourself(user_guess)   
+    raise ArgumentError, 'The game is finished!' if @board.empty?
     number = user_guess.strict_to_i    
     ans = @locations.include?(number) ? "Hit" : "Miss"
     @board.delete(number) 
