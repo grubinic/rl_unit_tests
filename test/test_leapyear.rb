@@ -11,7 +11,7 @@ class TestLeapYear < Test::Unit::TestCase
  
   def test_leap_year   
     @value_and_expected.each_pair do |value, expected|      
-      assert_equal leap_year?(value), expected 
+      assert_equal expected, leap_year?(value) 
     end
   end
 
