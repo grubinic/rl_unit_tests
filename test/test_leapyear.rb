@@ -1,8 +1,8 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "../lib", "leapyear"))
-
 require 'test/unit'
 
-class TestLeapYear < Test::Unit::TestCase  
+class TestLeapYear < Test::Unit::TestCase
+ # include TestUtils #This is not necessary so far for this suite.
   
   def setup
     @value_and_expected = {-100 => false, 400 => true, 1111 => false, 1999 => false, 2000 => true,
@@ -28,5 +28,3 @@ class TestLeapYear < Test::Unit::TestCase
     # edge case years.
   end
 end
-
-
